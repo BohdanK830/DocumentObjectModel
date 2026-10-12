@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій список цілей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>Мій список цілей</h1>
+
+        <form id="goal-form" novalidate>
+            <div class="input-group">
+                <input type="text" id="goal-input" placeholder="Наприклад: Вивчити DOM..." autocomplete="off">
+                <button type="submit" id="add-btn">Додати</button>
+            </div>
+            <div id="error-message" class="error-text"></div>
+        </form>
+
+        <div class="controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Усі</button>
+                <button class="filter-btn" data-filter="active">Активні</button>
+                <button class="filter-btn" data-filter="completed">Виконані</button>
+            </div>
+            <div id="counter" class="counter-text">Усього: 0. Виконано: 0</div>
+        </div>
+
+        <ul id="goals-list"></ul>
+
+        <p id="empty-message" class="empty-text">Поки що цілей немає</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
